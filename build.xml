@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="mod_wow_raid_progress_wotlk" basedir="." default="build">
+
+    <exec command="git rev-list --count HEAD" dir="." outputProperty="revision" />
+
+    <property name="path" value="/var/www/_deployment/" />
+
+    <property name="zip" value="${path}${phing.project.name}.rev.${revision}.zip" />
+
+    <fileset dir="." id="allfiles">
+        <include name="**" />
+        <exclude name="build.xml" />
+        <exclude name=".**" />
+    </fileset>
+
+    <fileset dir="_tmp" id="tmp">
+        <include name="**" />
+    </fileset>
+
+    <target name="cleanup">
+        <delete dir="_tmp" />
+        <delete file="${zip}" />
+    </target>
+
+    <target name="build" depends="cleanup">
+
+        <copy todir="_tmp">
+            <fileset refid="allfiles" />
+            <filterchain>
+                <replacetokens>
+                    <token key="REVISION" value="rev ${revision}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+
+        <zip destfile="${zip}">
+            <fileset refid="tmp" />
+        </zip>
+
+        <delete dir="_tmp" />
+
+    </target>
+
+</project>

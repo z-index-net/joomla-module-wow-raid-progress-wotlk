@@ -1,0 +1,83 @@
+.mod_wow_raid_progress_wotlk {
+    max-width: 280px;
+}
+
+.mod_wow_raid_progress_wotlk ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mod_wow_raid_progress_wotlk li {
+    margin: 0;
+    padding: 0;
+}
+
+.mod_wow_raid_progress_wotlk .npcs {
+    display: none;
+}
+
+.mod_wow_raid_progress_wotlk .npc {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0px;
+}
+
+.mod_wow_raid_progress_wotlk .npc:last-child {
+    border-bottom: none;
+}
+
+.mod_wow_raid_progress_wotlk .npcs.open {
+    display: block;
+}
+
+.mod_wow_raid_progress_wotlk .header {
+    position: relative;
+    margin-top: 5px;
+    height: 35px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.mod_wow_raid_progress_wotlk .header,
+.mod_wow_raid_progress_wotlk a {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+    padding-left: 3px;
+}
+
+.mod_wow_raid_progress_wotlk .header .p {
+    position: absolute;
+    display: block;
+    height: 5px;
+    background: forestgreen;
+    top: 0;
+    left: 0;
+}
+
+.mod_wow_raid_progress_wotlk .header .k {
+    float: right;
+    padding: 3px;
+}
+
+.mod_wow_raid_progress_wotlk .normal,
+.mod_wow_raid_progress_wotlk .heroic {
+    display: inline-block;
+    float: right;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mod_wow_raid_progress_wotlk .normal {
+    background-image: url('./images/normal.png');
+}
+
+.mod_wow_raid_progress_wotlk .heroic {
+    background-image: url('./images/heroic.png');
+}
+
+.mod_wow_raid_progress_wotlk .z0 {
+    background: url('images/z0.jpg') no-repeat top left;
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>MOD_WOW_RAID_PROGRESS_WOTLK</name>
+    <author>Branko Wilhelm</author>
+    <creationDate>Dez 2013</creationDate>
+    <copyright>(C) 2013 Branko Wilhelm</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>branko.wilhelm@gmail.com</authorEmail>
+    <authorUrl>www.z-index.net</authorUrl>
+    <version>@REVISION@</version>
+    <description>MOD_WOW_RAID_PROGRESS_WOTLK_DESC</description>
+    <files>
+        <filename module="mod_wow_raid_progress_wotlk">mod_wow_raid_progress_wotlk.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_wow_raid_progress_wotlk.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_wow_raid_progress_wotlk.sys.ini</language>
+        <language tag="de-DE">de-de/de-DE.mod_wow_raid_progress_wotlk.ini</language>
+        <language tag="de-DE">de-de/de-DE.mod_wow_raid_progress_wotlk.sys.ini</language>
+    </languages>
+    <updateservers>
+        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="mode" type="list" default="manual" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_MODE_LABEL">
+                    <option value="manual">MOD_WOW_RAID_PROGRESS_WOTLK_MODE_MANUAL</option>
+                    <option value="auto">MOD_WOW_RAID_PROGRESS_WOTLK_MODE_AUTO</option>
+                </field>
+                <field name="lang" type="list" default="" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_LANG_LABEL">
+                    <option value="">JSELECT</option>
+                    <option value="en">English</option>
+                    <option value="de">German</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="ru">Русский</option>
+                </field>
+                <field name="link" type="list" default="battle.net" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_LINK_LABEL">
+                    <option value="battle.net">battle.net</option>
+                    <option value="wowhead.com">wowhead.com</option>
+                    <option value="wowdb.com">wowdb.com</option>
+                </field>
+                <field name="opened" type="list" default="0" multiple="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_OPENED_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_OPENED_DESC">
+                    <option value="0">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_0</option>
+                </field>
+                <field name="hide" type="list" default="" multiple="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_HIDE_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_HIDE_DESC">
+                    <option value="0">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_0</option>
+                </field>
+            </fieldset>
+            <fieldset name="auto">
+                <field name="guild" type="text" default="" size="30" label="MOD_WOW_RAID_PROGRESS_WOTLK_GUILD_LABEL" />
+                <field name="realm" type="text" default="" size="30" label="MOD_WOW_RAID_PROGRESS_WOTLK_REALM_LABEL" />
+                <field name="region" type="list" default="" label="MOD_WOW_RAID_PROGRESS_WOTLK_REGION_LABEL">
+                    <option value="">JSELECT</option>
+                    <option value="us">USA</option>
+                    <option value="eu">Europe</option>
+                    <option value="kr">Korea</option>
+                    <option value="tw">Taiwan</option>
+                    <option value="sea">Southeast Asia</option>
+                </field>
+                <field type="radio" class="btn-group" name="heroic" default="0" label="MOD_WOW_RAID_PROGRESS_WOTLK_HEROIC_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_HEROIC_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="ranks" type="integer" first="0" last="10" step="1" multiple="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_RANKS_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_RANKS_DESC" />
+                <field name="successful" type="integer" first="5" last="25" step="1" default="5" label="MOD_WOW_RAID_PROGRESS_WOTLK_SUCCESSFUL_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_SUCCESSFUL_DESC" />
+                <field name="cache_time" type="text" filter="integer" default="24" size="5" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_CACHE_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_CACHE_DESC" />
+                <field name="timeout" type="text" filter="integer" default="10" size="5" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_TIMEOUT_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_TIMEOUT_DESC" />
+            </fieldset>
+            <fieldset name="raids">
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
