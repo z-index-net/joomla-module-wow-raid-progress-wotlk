@@ -19,7 +19,10 @@
 
 .mod_wow_raid_progress_wotlk .npc {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0px;
+    padding: 0 0 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mod_wow_raid_progress_wotlk .npc:last-child {
@@ -78,6 +81,34 @@
     background-image: url('./images/heroic.png');
 }
 
-.mod_wow_raid_progress_wotlk .z0 {
-    background: url('images/z0.jpg') no-repeat top left;
+.mod_wow_raid_progress_wotlk .z4987 {
+    background: url('images/z4987.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z4812 {
+    background: url('images/z4812.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z2159 {
+    background: url('images/z2159.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z4722 {
+    background: url('images/z4722.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z4273 {
+    background: url('images/z4273.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z4493 {
+    background: url('images/z4493.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z4500 {
+    background: url('images/z4500.jpg') no-repeat top left;
+}
+
+.mod_wow_raid_progress_wotlk .z3456 {
+    background: url('images/z3456.jpg') no-repeat top left;
 }

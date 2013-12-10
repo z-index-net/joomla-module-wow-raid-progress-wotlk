@@ -26,7 +26,7 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="mode" type="list" default="manual" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_MODE_LABEL">
+                <field name="mode" type="radio" class="btn-group" default="manual" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_MODE_LABEL">
                     <option value="manual">MOD_WOW_RAID_PROGRESS_WOTLK_MODE_MANUAL</option>
                     <option value="auto">MOD_WOW_RAID_PROGRESS_WOTLK_MODE_AUTO</option>
                 </field>
@@ -45,11 +45,25 @@
                     <option value="wowhead.com">wowhead.com</option>
                     <option value="wowdb.com">wowdb.com</option>
                 </field>
-                <field name="opened" type="list" default="0" multiple="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_OPENED_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_OPENED_DESC">
-                    <option value="0">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_0</option>
+                <field name="opened" type="list" default="4987" multiple="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_OPENED_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_OPENED_DESC">
+                    <option value="4987">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4987</option>
+                    <option value="4812">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4812</option>
+                    <option value="2159">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_2159</option>
+                    <option value="4722">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4722</option>
+                    <option value="4273">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4273</option>
+                    <option value="4493">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4493</option>
+                    <option value="4500">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4500</option>
+                    <option value="3456">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_3456</option>
                 </field>
                 <field name="hide" type="list" default="" multiple="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_HIDE_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_HIDE_DESC">
-                    <option value="0">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_0</option>
+                    <option value="4987">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4987</option>
+                    <option value="4812">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4812</option>
+                    <option value="2159">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_2159</option>
+                    <option value="4722">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4722</option>
+                    <option value="4273">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4273</option>
+                    <option value="4493">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4493</option>
+                    <option value="4500">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4500</option>
+                    <option value="3456">MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_3456</option>
                 </field>
             </fieldset>
             <fieldset name="auto">
@@ -73,6 +87,13 @@
                 <field name="timeout" type="text" filter="integer" default="10" size="5" required="true" label="MOD_WOW_RAID_PROGRESS_WOTLK_TIMEOUT_LABEL" description="MOD_WOW_RAID_PROGRESS_WOTLK_TIMEOUT_DESC" />
             </fieldset>
             <fieldset name="raids">
+                <field type="spacer" class="label" label="MOD_WOW_RAID_PROGRESS_WOTLK_ZONE_4987" />
+                <field name="adjust_39863" default="auto" type="radio" class="btn-group" label="MOD_WOW_RAID_PROGRESS_WOTLK_NPC_39863">
+                    <option value="auto">MOD_WOW_RAID_PROGRESS_WOTLK_RAID_AUTO</option>
+                    <option value="no">MOD_WOW_RAID_PROGRESS_WOTLK_RAID_NO</option>
+                    <option value="normal">MOD_WOW_RAID_PROGRESS_WOTLK_RAID_NORMAL</option>
+                    <option value="heroic">MOD_WOW_RAID_PROGRESS_WOTLK_RAID_HEROIC</option>
+                </field>
             </fieldset>
             <fieldset name="advanced">
                 <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />

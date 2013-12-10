@@ -14,13 +14,13 @@ final class mod_wow_raid_progress_wotlk
 
     private $params = null;
     private $raids = array(
-        // 
-        0 => array(
+        // The Ruby Sanctum
+        4987 => array(
             'link' => '',
             'stats' => array('kills' => 0, 'mode' => 'normal'),
             'npcs' => array(
-                // Morchok
-                0 => array(
+                // Halion
+                39863 => array(
                     'link' => '',
                     'normal' => 0,
                     'heroic' => 0
@@ -49,13 +49,6 @@ final class mod_wow_raid_progress_wotlk
 
             if ($this->params->get('heroic') && $this->params->get('ranks')) {
                 $this->checkHeroic($result->members);
-            } else {
-                /*
-                // remove Sinestra if only normal mode visible
-                if (isset($this->raids[5334])) {
-                    unset($this->raids[5334]['npcs'][45213]);
-                }
-                */
             }
         }
 
