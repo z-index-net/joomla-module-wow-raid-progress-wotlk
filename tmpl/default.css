@@ -23,6 +23,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    clear: both;
+}
+
+.mod_wow_raid_progress_wotlk .npc a {
+    float: left;
 }
 
 .mod_wow_raid_progress_wotlk .npc:last-child {
