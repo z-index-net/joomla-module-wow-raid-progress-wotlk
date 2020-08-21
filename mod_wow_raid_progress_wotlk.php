@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die;
 
-require_once dirname(__FILE__) . '/helper.php';
+require_once __DIR__ . '/helper.php';
 
 if (version_compare(JVERSION, 3, '>=')) {
     $params->set('guild', rawurlencode(JString::strtolower($params->get('guild'))));

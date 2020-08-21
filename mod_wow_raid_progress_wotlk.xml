@@ -21,7 +21,7 @@
         <language tag="de-DE">de-DE/de-DE.mod_wow_raid_progress_wotlk.sys.ini</language>
     </languages>
     <updateservers>
-        <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
+        <server type="extension" priority="1" name="WoW Raid Progress - Wrath of the Lich King">https://raw.githubusercontent.com/z-index-net/joomla-module-wow-raid-progress-wotlk/master/updatestream.xml</server>
     </updateservers>
     <config>
         <fields name="params">
